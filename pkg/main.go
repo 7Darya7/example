@@ -1,13 +1,12 @@
 package main
 
-import (
-	"fmt"
-
-	//"github.com/7Darya7/example/pkg/internal/secret"
-	"github.com/7Darya7/example/pkg/utils"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(utils.Add(2, 3))
-	//fmt.Println(secret.SecretValue())
+	msg := sayHello("Alice")
+	fmt.Println(msg)
+}
+
+func sayHello(name string) string {
+	return fmt.Sprintf("Hi %s", name)
 }
